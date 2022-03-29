@@ -56,3 +56,8 @@ def user_pick_restaurant():
         elif restaurant_satisfaction.lower() == 'n':
             print("Sorry that you dind't like that idea, let's try that again!")
             satisfied == 1
+
+chosen_destination = user_pick_destination()
+chosen_transportation = user_pick_transportation()
+chosen_entertainment = user_pick_entertainment()
+chosen_restaurant = user_pick_restaurant()
