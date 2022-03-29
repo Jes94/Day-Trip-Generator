@@ -92,3 +92,19 @@ def trip_issue(user_issue):
         return corrected_restaurant
     else:
         pass
+
+resolved_issue = trip_issue(confirmation_issue)
+
+def new_confirmation(new_choice):
+    if new_choice == 'destination':
+        print(f"Prepare for your dream vacation to come alive! You will be arriving at {resolved_issue} by {chosen_transportation} and will be spending the day {chosen_entertainment}. You will conclude the evening by dining at {chosen_restaurant}.")
+    elif new_choice == 'transportation':
+        print(f"Prepare for your dream vacation to come alive! You will be arriving at {chosen_destination} by {resolved_issue} and will be spending the day {chosen_entertainment}. You will conclude the evening by dining at {chosen_restaurant}.")
+    elif new_choice == 'entertainment':
+        print(f"Prepare for your dream vacation to come alive! You will be arriving at {chosen_destination} by {chosen_transportation} and will be spending the day {resolved_issue}. You will conclude the evening by dining at {chosen_restaurant}.")
+    elif new_choice == 'restaurant':
+        print(f"Prepare for your dream vacation to come alive! You will be arriving at {chosen_destination} by {chosen_transportation} and will be spending the day {chosen_entertainment}. You will conclude the evening by dining at {resolved_issue}.")
+    else:
+        pass
+
+new_confirmation(confirmation_issue)
