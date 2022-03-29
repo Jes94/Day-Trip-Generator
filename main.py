@@ -43,3 +43,16 @@ def user_pick_entertainment():
         elif entertainment_satisfaction.lower() == 'n':
             print("Sorry you didn't like that choice, let's try that again!")
             satisfied == 1
+
+def user_pick_restaurant():
+    satisfied = 1  
+    while satisfied != 0:
+        random_restaurant = random.choice(restaurant_list)
+        restaurant_satisfaction = input(f'We have selected {random_restaurant} for your restaurant! Does that sound appatizing? Enter y/n: ')
+        if restaurant_satisfaction.lower() == 'y':
+            print("Glad we have that settled, let's keep going!")
+            satisfied -= 1
+            return random_restaurant
+        elif restaurant_satisfaction.lower() == 'n':
+            print("Sorry that you dind't like that idea, let's try that again!")
+            satisfied == 1
