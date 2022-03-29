@@ -72,3 +72,23 @@ def trip_confirmation():
         return confirmed_issue
 
 confirmation_issue = trip_confirmation()
+
+def trip_issue(user_issue):
+    if user_issue.lower() == 'destination':
+        print("We're sorry to hear that our planned destination didn't work, let us fix that for you.")
+        corrected_destination = user_pick_destination()
+        return corrected_destination
+    elif user_issue.lower() == 'transportation':
+        print("We're sorry to hear that our planned method of transportation didn't work out, let us fix that for you.")
+        corrected_transportation = user_pick_transportation
+        return corrected_transportation
+    elif user_issue.lower() == 'entertainment':
+        print("We're sorry that the planned activities didn't work out, let us correct that for you.")
+        corrected_entertainment = user_pick_entertainment
+        return corrected_entertainment
+    elif user_issue.lower() == 'restaurant':
+        print("We're sorry that the planned restaurant didn't work out, let us fix that for you.")
+        corrected_restaurant = user_pick_restaurant
+        return corrected_restaurant
+    else:
+        pass
