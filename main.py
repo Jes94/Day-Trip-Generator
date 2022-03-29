@@ -30,3 +30,16 @@ def user_pick_transportation():
         elif transportation_satisfaction.lower() == 'n':
             print("We're terribly sorry that you didn't like that choice, let's try that again.")
             satisfied == 1
+
+def user_pick_entertainment():
+    satisfied = 1  
+    while satisfied != 0:
+        random_entertainment = random.choice(entertainment_list)
+        entertainment_satisfaction = input(f'How about {random_entertainment} as your entertainment option! Does this sound good? Enter y/n: ')
+        if entertainment_satisfaction.lower() == 'y':
+            print("Awesome, sounds like a blast! Let's move on.")
+            satisfied -= 1
+            return random_entertainment
+        elif entertainment_satisfaction.lower() == 'n':
+            print("Sorry you didn't like that choice, let's try that again!")
+            satisfied == 1
