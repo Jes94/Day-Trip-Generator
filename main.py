@@ -17,3 +17,16 @@ def user_pick_destination():
         elif destination_satisfaction.lower() == 'n':
             print("Sorry you didn't like that choice, let's give it another go!")
             satisfied == 1
+
+def user_pick_transportation():
+    satisfied = 1  
+    while satisfied != 0:
+        random_transportation = random.choice(transportation_list)
+        transportation_satisfaction = input(f'We have selected {random_transportation} for your transportation option! Does this sound good? Enter y/n: ')
+        if transportation_satisfaction.lower() == 'y':
+            print("Awesome, that's a great choice! Let's keep going!")
+            satisfied -= 1
+            return random_transportation
+        elif transportation_satisfaction.lower() == 'n':
+            print("We're terribly sorry that you didn't like that choice, let's try that again.")
+            satisfied == 1
