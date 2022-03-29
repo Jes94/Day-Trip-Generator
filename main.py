@@ -61,3 +61,14 @@ chosen_destination = user_pick_destination()
 chosen_transportation = user_pick_transportation()
 chosen_entertainment = user_pick_entertainment()
 chosen_restaurant = user_pick_restaurant()
+
+def trip_confirmation():
+    print(f"Congrats! We have completed generating your trip. Now let's just confirm that this is the trip you wanted. \nThe Trip we have generated for you is:\nDestination: {chosen_destination}\nTransportation: {chosen_transportation}\nrestaurant: {chosen_restaurant}\nEntertainment: {chosen_entertainment}")
+    confirmation = input("Would you like to finalize this trip? Enter y/n: ")
+    if confirmation.lower() == 'y':
+        print(f"Prepare for your dream vacation to come alive! You will be arriving at {chosen_destination} by {chosen_transportation} and will be spending the day {chosen_entertainment}. You will conclude the evening by dining at {chosen_restaurant}.")
+    elif confirmation.lower() == 'n':
+        confirmed_issue = input("Please specify which part you would like to change.")
+        return confirmed_issue
+
+confirmation_issue = trip_confirmation()
